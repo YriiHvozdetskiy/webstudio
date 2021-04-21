@@ -1,0 +1,127 @@
+.samples {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+    @media screen and (min-width: 576px) {
+        margin-top: 40px;
+    }
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 960px) {
+        margin-top: 50px;
+    }
+}
+
+.samples__link {
+    transition: 250ms $time-distribution-function;
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.samples__wrapper {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+}
+
+.samples__img {
+    display: block;
+}
+
+.samples__text {
+    font-size: 18px;
+    line-height: 1.56;
+    padding: 24px;
+
+    color: $white-text-color;
+}
+
+.samples__box {
+    position: relative;
+    overflow: hidden;
+}
+
+.samples__inner {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 250ms $time-distribution-function;
+
+    background: rgba(33, 150, 243, 0.9);
+
+    @media screen and (max-width: 330px) {
+        padding-top: 70px;
+    }
+
+    @media screen and (max-width: 480px) {
+        transform: translateY(120%);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        transform: translateY(105%);
+    }
+
+    .samples__link:hover & {
+        transform: translateY(0px);
+    }
+}
+
+.samples__item {
+    @media screen and (max-width: 767px) {
+        &:not(:nth-last-child(1)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        max-width: 354px;
+
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n + 1)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
+
+        &:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n + 3)) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.wrapper__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: $title-color;
+}
+
+.wrapper__text {
+    font-size: 16px;
+    line-height: 1.88;
+    margin: 4px 0 0;
+
+    color: $primary-text-color;
+}

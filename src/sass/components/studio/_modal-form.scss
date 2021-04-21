@@ -1,0 +1,235 @@
+.form-item {
+    position: relative;
+    margin-bottom: 28px;
+
+    &:nth-last-child(2) {
+        margin-bottom: 20px;
+    }
+    &:nth-last-child(1) {
+        margin-bottom: 0px;
+    }
+
+    & :nth-last-child(3) {
+        width: 100%;
+        height: 40px;
+
+        padding-left: 42px;
+        padding-right: 42px;
+
+        transition: border-color 250ms $time-distribution-function;
+    }
+}
+
+.form-item {
+    .textarea {
+        width: 100%;
+        height: 120px;
+
+        padding: 15px;
+        margin-bottom: 20px;
+
+        resize: none;
+    }
+}
+
+.form-item {
+    .textarea,
+    input {
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+    }
+}
+
+.form-item {
+    input:focus,
+    .textarea:focus {
+        border-color: $accent-color;
+        transition: border-color 250ms $time-distribution-function;
+    }
+}
+
+.form-item {
+    .label-text {
+        position: absolute;
+        top: 50%;
+        left: 42px;
+
+        transform: translateY(-50%);
+        transition: transform 250ms $time-distribution-function;
+    }
+}
+
+.form-item {
+    .form-link {
+        @media screen and (max-width: 959px) {
+            font-size: 12px;
+            line-height: 1.17;
+        }
+
+        font-size: 14px;
+        line-height: 1.71;
+        text-decoration-line: underline;
+
+        color: $accent-color;
+    }
+}
+
+.form-item {
+    .form-label {
+        @media screen and (max-width: 959px) {
+            font-size: 12px;
+            line-height: 1.17;
+        }
+
+        font-size: 14px;
+        line-height: 1.71;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0px;
+
+            width: 16px;
+            height: 15px;
+
+            border: solid 2px $title-color;
+            border-radius: 2px;
+            transform: translateY(-50%);
+
+            @media screen and (min-width: 320px) {
+                top: 80%;
+            }
+
+            @media screen and (min-width: 436px) {
+                top: 60%;
+                left: -18px;
+            }
+
+            @media screen and (min-width: 480px) {
+                top: 50%;
+                left: -10px;
+            }
+
+            @media screen and (min-width:960px){
+                left: 0px;
+            }
+        }
+    }
+}
+
+.form-modal--list {
+    margin-bottom: 30px;
+}
+
+.form-modal--group {
+    .label-text {
+        display: block;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+    }
+}
+
+.form-modal--group {
+    .form-btn {
+        @extend %button;
+        margin-top: 0px;
+    }
+
+    & .form-btn:hover {
+        border-color: $accent-color;
+    }
+}
+
+.form-item .textarea + .label-text {
+    top: 25px;
+    left: 20px;
+}
+
+.form-item .textarea:focus + .label-text {
+    color: $accent-color;
+    transform: translate(-25px, -40px);
+    transition: color 250ms $time-distribution-function, transform 250ms $time-distribution-function;
+}
+
+.form-item input:focus + .label-text,
+.form-item .textarea:focus + .label-text {
+    color: $accent-color;
+    transform: translate(-25px, -40px);
+    transition: color 250ms $time-distribution-function, transform 250ms $time-distribution-function;
+}
+
+.form-item .textarea:focus + .label-text {
+    transform: translate(-15px, -45px);
+}
+
+.form-item {
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+
+        width: 18px;
+        height: 18px;
+
+        color: $accent-color;
+
+        pointer-events: none;
+
+        transform: translateY(-50%);
+        transition: fill 250ms $time-distribution-function;
+    }
+}
+
+.form-item input:focus ~ .icon {
+    fill: currentColor;
+    transition: fill 250ms $time-distribution-function;
+}
+
+.form-item input:focus + label,
+.form-item input:not(:placeholder-shown) + label:not(:nth-last-child(1)) {
+    transform: translate(-25px, -40px);
+}
+
+.form-item textarea:focus + label,
+.form-item textarea:not(:placeholder-shown) + label {
+    transform: translate(-15px, -45px);
+}
+
+.form-modal__text {
+    @media screen and (max-width: 959px) {
+        line-height: 1.5;
+    }
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    color: $title-color;
+}
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox:checked + .form-label::after {
+    background: url(../images/system/icon-check.svg);
+    background-size: contain;
+    background-position: 50% 50%;
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-origin: border-box;
+    border-radius: 2px;
+}

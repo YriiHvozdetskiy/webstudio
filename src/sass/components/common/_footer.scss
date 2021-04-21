@@ -1,0 +1,142 @@
+.container.wrapper {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer__box {
+    @media screen and (min-width: 576px) {
+        display: flex;
+        align-items: baseline;
+    }
+
+    @media screen and (max-width: 1199px) {
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 575px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        align-items: center;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+    }
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $hero-footer-bg-color;
+}
+
+.footer__logo {
+    @extend %logo;
+
+    @media screen and (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.17;
+    }
+}
+
+.footer__logo span {
+    color: $white-text-color;
+}
+
+.address {
+    width: 231px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-top: 20px;
+
+    color: $white-text-color;
+}
+
+.address__contact {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-top: 9px;
+
+    transition: color 250ms $time-distribution-function;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    &:focus {
+        color: $white-text-color;
+    }
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 575px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
+}
+
+.join-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    color: $white-text-color;
+}
+
+.join-list {
+    display: flex;
+}
+
+.list-item {
+    &:not(:nth-last-child(1)) {
+        margin-right: 10px;
+    }
+}
+
+.item-link {
+    display: inline-flex;
+    padding: 12px;
+    border-radius: 50%;
+
+    transition: background-color 250ms $time-distribution-function;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: $white-text-color;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.join-icon {
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
+}

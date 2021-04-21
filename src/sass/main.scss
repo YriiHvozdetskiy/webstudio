@@ -1,0 +1,19 @@
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/placeholders';
+
+@import './components/common/common';
+
+@import './components/common/header';
+@import './components/common/footer';
+@import './components/common/footer-form';
+
+
+@import './components/hero';
+@import './components/studio/modal';
+@import './components/studio/modal-form';
+@import './components/studio/benefits';
+@import './components/studio/works';
+@import './components/studio/team';
+@import './components/studio/customers';
+
